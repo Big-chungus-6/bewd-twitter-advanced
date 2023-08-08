@@ -52,6 +52,12 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Using the local settings for Active Storage
+  config.active_storage.service = :local
+
+  # Using the Amazon S3 settings for Active Storage
+  config.active_storage.service = :amazon
+
   # Don't overwrite Rspec files in generators
   config.generators do |g|
     g.test_framework nil
